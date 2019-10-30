@@ -208,12 +208,12 @@ class AbstractVisualizer {
       const width = lineProperties.width || WIDTH;
       const color = lineProperties.color || COLOR;
       const context = canvas.getContext("2d");
-      
+
       const endPoint = {
         x: startPoint.x + 6 * radius,
         y: startPoint.y,
       };
-      
+
       const vector = {
         x: endPoint.x - startPoint.x,
         y: endPoint.y - startPoint.y,
@@ -223,34 +223,34 @@ class AbstractVisualizer {
         x: vector.x / length,
         y: vector.y / length,
       };
-      
+
       this.drawSemiCircle(
-        {x: startPoint.x, y: startPoint.y}, 
-        radius, 
-        0, 
-        Math.PI, 
-        width, 
-        color);
-      this.drawSemiCircle(
-        {x: (startPoint.x + 2 * radius), y: startPoint.y}, 
-        radius,  
-        Math.PI, 
+        {x: startPoint.x, y: startPoint.y},
+        radius,
         0,
-        width, 
+        Math.PI,
+        width,
         color);
       this.drawSemiCircle(
-        {x: (startPoint.x + 4 * radius), y: startPoint.y}, 
-        radius, 
-        0, 
-        Math.PI, 
-        width, 
-        color);
-      this.drawSemiCircle(
-        {x: endPoint.x, y: endPoint.y}, 
-        radius,  
-        Math.PI, 
+        {x: (startPoint.x + 2 * radius), y: startPoint.y},
+        radius,
+        Math.PI,
         0,
-        width, 
+        width,
+        color);
+      this.drawSemiCircle(
+        {x: (startPoint.x + 4 * radius), y: startPoint.y},
+        radius,
+        0,
+        Math.PI,
+        width,
+        color);
+      this.drawSemiCircle(
+        {x: endPoint.x, y: endPoint.y},
+        radius,
+        Math.PI,
+        0,
+        width,
         color);
   }
 }
