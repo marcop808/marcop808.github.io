@@ -82,7 +82,8 @@ function generateRandomPoint() {
   // HINT: we can use the constants CANVAS_HEIGHT and CANVAS_WIDTH for the max
   //     x and y values.
   return {
-    x: 0,
-    y: 0,
+    x: generateRandomValue(),
+
+    y: generateRandomValue(),
   };
 }
