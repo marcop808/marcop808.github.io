@@ -15,11 +15,22 @@ class Canvas {
   container.appendChild(canvasElement)
   this.ctx = this.obj.getContext("2d")
   this.setGridSize(11);
+  canvasElement.width = this.pixelWidth;
+  canvasElement.height = this.pixelHeight;
 }
 setGridSize(gridSize) {
 }
-draw(){
-
+draw(cells){
+  this.ctx.lineWidth=
+  strokeStyle= #999
+  for(let i = 0,i<this.pixelHeight, i = this.cellSize)
+  this.cellSize
+  this.ctx.beginPath()
+  ctx.moveTo(20,20);
+  ctx.lineTo(200,20);
+  ctx.stroke();
+  ctx.canvas.click((event)=>{});
+  this.obj=addEventListener
 }
 click(fn){
 
