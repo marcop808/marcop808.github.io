@@ -21,20 +21,46 @@ class Canvas {
 setGridSize(gridSize) {
 }
 draw(cells){
-  this.ctx.lineWidth=
-  strokeStyle= #999
-  for(let i = 0,i<this.pixelHeight, i = this.cellSize)
-  this.cellSize
-  this.ctx.beginPath()
-  ctx.moveTo(20,20);
-  ctx.lineTo(200,20);
+  this.ctx.lineWidth = 1;
+  this.ctx.strokeStyle= '#999';
+  for(let i = this.cellSize, i < this.pixelWidth; i = i + this.cellSize)
+  this.ctx.beginPath();
+  ctx.moveTo(i + 0.5, 0);
+  ctx.lineTo(i + 0.5, this.pixelWidth);
   ctx.stroke();
   ctx.canvas.click((event)=>{});
   this.obj=addEventListener
 }
-click(fn){
-
+draw(cells){
+  this.ctx.lineHeight = 1;
+  this.ctx.strokeStyle= '#999';
+  for(let i = this.cellSize, i < this.pixelHeight; i = i + this.cellSize)
+  this.ctx.beginPath();
+  ctx.moveTo(i + 0.5, 0);
+  ctx.lineTo(i + 0.5, this.pixelHeight);
+  ctx.stroke();
+  ctx.canvas.click((event)=>{});
+  this.obj=addEventListener
 }
+this.ctx.fillStyle ='yellow';
+for(let i = 0; i < cells.length; i = i + 1) {
+  let cell = cells[i];
+  let x = cell[0];
+  let y = cell[1];
+  this.ctx.fillRect(
+    x * this.cellSize + 1,
+    y * this.cellSize + 1,
+    this.cellSize - 1,
+    this.cellSize - 1)
+}
+click(fn){
+  this.obj.addEventListener('click', (clickEvent)=> {
+    let clientX = clickEvent.clientX;
+    let clientY = clickEvent.;
+    let rect = this.obj getBoundingClientRect();
+  }
+ }
+
 getDimension(){
 
 }
