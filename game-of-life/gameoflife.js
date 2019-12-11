@@ -3,8 +3,33 @@ class GameOfLife {
   constructor(){
   }
   next(shape){
+    for neighbours = {}
+    console.log(shape);
+    for(let i 0; i < shape.length; i =i +1){
+      let cell = shape[i];
+      let x = cell[0];
+      let y = cell[1];
 
+      let key = 'c' + (x-1) + ',' + (y-1);
+      if(neighbours[key]) {.n = neighbours[key].n + 1;
+        neighbours[key].n = neighbours[key].n + 1
+      } else {
+        neighbours[key] = 
+          n: 1,
+          cell: [x-1, y-1],
+        };
+      }
+      let key = 'c' + (x+1) + ',' + (y-1);
+      if(neighbours[key]) {.n = neighbours[key].n + 1;
+        neighbours[key].n = neighbours[key].n + 1
+      } else {
+        neighbours[key] ={
+          n: 1,
+          cell: [x+1, y-1],
+        };}
   }
+  for()
+  return shape;
 }
 class Canvas {
   constructor(container){
@@ -108,6 +133,15 @@ class Controls{
     this.generation = 0;
   }
   init(shapes){
+    this.canvas.click((evt) =>{
+      this.shape.toggle([evt.cellX, evt.cellY]);
+    });
+    let nextBtn = document.getElementById('next');
+    nextBtn.addEventListener('click', ()=>{
+      this.next();
+    });
+)
+    }
 
   }
   setGeneration(gen){
@@ -117,6 +151,8 @@ class Controls{
 
   }
   next(){
+    let anything = this.shape.get();
+    let updateAnything = this.GameOfLife.next(anything)
 
   }
 
